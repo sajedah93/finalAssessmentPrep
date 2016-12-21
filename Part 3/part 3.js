@@ -24,6 +24,7 @@
     b. Change the font family for the header of the page  
     c. Enlarge the input text (both: width & height)
 2. Add jQuery library to the HTML file
-3. Write javascript function when user type text inside the input text and click the "Add" 
+3. Write javascript function when user type text inside
+ the input text and click the "Add" 
     button it will add the text to the ul elemtn as li
 */
