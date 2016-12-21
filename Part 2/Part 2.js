@@ -2,7 +2,6 @@
 /*                                  Part 2                                   */
 //=============================================================================
  /*
-
   Hint: write the function in question (b, c, d) outside the Player scope 
 
   Note : do not use (for, while, recursion) but you allowed to use the High order function
@@ -30,5 +29,66 @@
 		sortPalyerBy(arrayOfPlayers, "age");
 		sortPalyerBy(arrayOfPlayers, "name");
  */
-
 //writ your code here .....
+				var players = [];
+
+			function player(name){
+				var onePlayer={};
+				onePlayer={name:name}
+
+
+			return {
+				addInfo:function(age, position, level, availability){
+					onePlayer.age=age;
+					onePlayer.position=position;
+					onePlayer.level=level;
+					onePlayer.availability=availability;
+					players.push(onePlayer)
+
+				},
+				increaseLevel:function(n){
+					onePlayer.level+=n
+					
+				},
+				isAvailable:function(){
+					return onePlayer.availability;
+					}
+				}
+
+				}
+			
+
+			function decrease(){
+				for (var i = 0; i < players.length; i++) {
+					if(players[i].age > 30){
+						players[i].level-=1;
+					}
+				}
+				return players
+			}
+
+
+			function sortPlayers(key){
+				for (var i = 0; i < players.length; i++) {
+					if(typeof(players[i][key]) === 'number'){
+				players.sort(function(a,b){
+					return a.players[i][key]-b.players[i][key]
+				}) }else {
+
+					players.sort(function(a, b){
+				    var nameA=a.players[i][name].toLowerCase();
+				    var nameB=b.players[i][name].toLowerCase();
+				    if (nameA < nameB) 
+				        return -1 
+				    if (nameA > nameB)
+				        return 1
+				    return 0 
+				})
+				} 
+			}
+			return players
+				}
+				
+
+
+
